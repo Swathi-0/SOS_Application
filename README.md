@@ -38,7 +38,7 @@ flowchart TD
 ```mermaid
 %% UML Use Case Diagram for SOS Application
 
-usecaseDiagram
+usecase
     actor User as "User"
     actor ShakeDetection as "Shake Detection Service"
     actor SMSService as "SMS Service"
@@ -58,6 +58,7 @@ usecaseDiagram
     (Send SOS SMS) --> SMSService
 
     SMSService --> (Display Notification)
+
 ```
 
 
