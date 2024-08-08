@@ -1,6 +1,6 @@
 # SOS_Application
 This  a SOS app for women’s safety using Java in Android Studio. The app sends the live location to saved emergency contacts when the phone is shaken.
-
+# Flowchart
 ```mermaid
 flowchart TD
     A[Start] --> B[Splash Screen]
@@ -32,9 +32,10 @@ flowchart TD
     Q -- Yes --> R[Stop SOS Service]
     Q -- No --> I
     
-    R --> S[End]
-
-
+    R --> S[End] 
+```
+# Flowchart
+```mermaid
 %% UML Use Case Diagram for SOS Application
 
 usecaseDiagram
@@ -57,4 +58,7 @@ usecaseDiagram
     (Send SOS SMS) --> SMSService
 
     SMSService --> (Display Notification)
+```
+
+
 
