@@ -33,3 +33,28 @@ flowchart TD
     Q -- No --> I
     
     R --> S[End]
+
+
+%% UML Use Case Diagram for SOS Application
+
+usecaseDiagram
+    actor User as "User"
+    actor ShakeDetection as "Shake Detection Service"
+    actor SMSService as "SMS Service"
+
+    User --> (Launch Application)
+    User --> (Register Emergency Contact)
+    User --> (Shake Phone)
+
+    (Launch Application) --> (Activate Shake Detection)
+    (Activate Shake Detection) --> ShakeDetection
+    (Shake Phone) --> ShakeDetection
+
+    ShakeDetection --> (Retrieve Location)
+    ShakeDetection --> (Send SOS SMS)
+
+    (Retrieve Location) --> SMSService
+    (Send SOS SMS) --> SMSService
+
+    SMSService --> (Display Notification)
+
